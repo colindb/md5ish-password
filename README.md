@@ -7,7 +7,7 @@ A simple password management system.  Just pick a secret phrase ("i love popcorn
 
 md5ish-password can be used online with index.html and md5-min.js (copied from http://pajhome.org.uk/crypt/md5).  For example, see: http://orifice.org/md5/.  I can also be used from the command line, see md5ish.sh.
 
-## WHY MD5ISH-PASSWORD
+## WHY MD5ISH-PASSWORD?
 
 Instead of remembering a million different passwords across the internet (or using just a couple of shared passwords across everything), use md5ish-password.  Keep just one password safe and use it to generate a unique password for every domain you use.
 
