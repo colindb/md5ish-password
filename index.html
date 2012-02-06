@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>MD5 Encrypter</title>
+  <script src="md5-min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function md5Encrypt() {
+      var raw = hex_md5(document.getElementById('pass').value + ' ' + document.getElementById('input').value);
+      raw = raw.substring(0, 12);
+      document.getElementById('out').value = raw + ".Q";
+      document.getElementById('pass').value = "";
+      document.getElementById('input').value = "";
+      document.getElementById('out').focus();
+      document.getElementById('out').select();
+    }
+
+    function HandleKeypress(e) {
+      var keycode;
+      if (window.event) {
+        keycode = window.event.keyCode;
+      } else if (e) {
+        keycode = e.which;
+      } else {
+        return true;
+      }
+
+      if (keycode == 13) {
+        md5Encrypt();
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</head>
+<body onload="document.getElementById('pass').focus();">
+  Phrase: <input type="password" id="pass" size="40" onkeypress="HandleKeypress(event)" /><br />
+  Site: <input type="text" id="input" size="40" onkeypress="HandleKeypress(event)" />
+  <input type="button" value="Password" onclick="md5Encrypt()" /><br />
+  Data: <input type="text" id="out" size="40" /><br />
+
+</body>
+</html>
